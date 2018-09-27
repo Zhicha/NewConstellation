@@ -1,0 +1,12 @@
+¬сплывающа€ подсказка описани€ data CSS + схему прив€зать(как html в DB), предосмотр и полное отображение
+
+
+SELECT `id`, `part`, `subpart`, `code`, `datechange`, `timechange`, `trash`, `datecreate` FROM `library` WHERE 1
+
+INSERT INTO `library`(`id`, `part`, `subpart`, `code`, `datechange`, `timechange`, `trash`, `datecreate`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])
+
+UPDATE `library` SET `id`=[value-1],`part`=[value-2],`subpart`=[value-3],`code`=[value-4],`datechange`=[value-5],`timechange`=[value-6],`trash`=[value-7],`datecreate`=[value-8] WHERE 1
+
+
+DELETE `part` FROM `library` WHERE 0
+

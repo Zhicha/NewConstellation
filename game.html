@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="Web site New constellation ltd. Frontend and web development.">
+<link rel="stylesheet" href="css/master.css">
+<link rel="stylesheet" href="css/game.css?v4">
+<title>New constellation ltd. Home page.</title>
+<script defer src="scripts/game.js"></script>
+</head>
+<body>
+<header>
+<h1>GAME.EXE <a href="game2.html">GAME2</a></h1>
+</header>
+<main>
+<section>
+  <div class="leftTop">
+  <table>
+    <tbody>
+      <th>Resource&Source</th>
+      <tr>
+        <td>Human Source (Power)</td>
+        <td>Colony A01</td>
+        <td>1 men of 10 minuts</td>
+      </tr>
+      <tr>
+        <td>Human Resource (persons)</td>
+        <td id="menResousce">0</td>
+        <td>Worker, Elite</td>
+      </tr>
+      <tr>
+        <td>You need workers&Elite</td>
+        <td id="workers">0</td>
+        <td id="elite">0</td>
+      </tr>
+      <tr>
+      <td>Gas we have / Limit</td>
+      <td id="gasThereIs">0</td>
+      <td id="gasLimit">0</td>
+    </tr>
+    <tr>
+    <td>Soldiers 15 gas</td>
+    <td id="soldierPehota" ><img class="imgfishka" src="img/pehota.png" alt="" onclick="new Audio('sound/click.mp3').play();buySoldier()"></td>
+    <td id="countPehota">0</td>
+  </tr>
+  <tr>
+  <td>Biggan 250 gas & 2 soldiers</td>
+  <td id="bigGan" ><img class="imgfishka" src="img/biggan.jpg" alt="" onclick="new Audio('sound/click.mp3').play();buyBiggan()"></td>
+  <td id="countBiggan">0</td>
+</tr>
+    </tbody>
+  </table>
+</div>
+<div class="gameboard">
+<div class="line">
+<div class="cell" id="a1">
+</div>
+<div class="cell" id="a2">
+</div>
+<div class="cell" id="a3">
+</div>
+<div class="cell" id="a4">
+</div>
+<div class="cell" id="a5">
+</div>
+</div>
+<div class="line">
+<div class="cell" id="b1">
+</div>
+<div class="cell" id="b2">
+  <img class="imgfishka" src="img/ship01.png" alt="">
+</div>
+<div class="cell" id="b3">
+</div>
+<div class="cell" id="b4">
+</div>
+<div class="cell" id="b5">
+</div>
+</div>
+<div class="line">
+<div class="cell" id="c1">
+</div>
+<div class="cell" id="c2">
+</div>
+<div class="cell" id="c3">
+  <img class="imgfishka" src="img/Planet.png" alt="">
+</div>
+<div class="cell" id="c4">
+</div>
+<div class="cell" id="c5">
+</div>
+</div>
+<div class="line">
+<div class="cell" id="d1">
+</div>
+<div class="cell" id="d2">
+</div>
+<div class="cell" id="d3">
+</div>
+<div class="cell" id="d4">
+</div>
+<div class="cell" id="d5">
+</div>
+</div>
+<div class="line">
+<div class="cell" id="d1">
+</div>
+<div class="cell" id="d2">
+</div>
+<div class="cell" id="d3">
+</div>
+<div class="cell" id="d4">
+</div>
+<div class="cell" id="d5">
+</div>
+</div>
+</div>
+<div class="rightside1" id="showresult">
+  <img id="consoleShow" class="imgCity" src="img/colony01.jpg" alt="" onclick="new Audio('sound/click.mp3').play()">
+  <div class="statusCity">
+  </div>
+</div>
+</section>
+<article class="article2">
+<div id="consoleBar" class="consoleBar">
+</div>
+</article>
+</main>
+</div>
+<div class="">
+  <audio id="sound01" src="sound/track01.mp3" controls loop></audio>
+  <audio id="sound02" src="sound/adminready.mp3"></audio>
+  <audio id="sound03" src="sound/shortly.mp3"></audio>
+  <audio id="sound04" src="sound/worker.mp3"></audio>
+  <audio id="sound05" src="sound/soldierready.mp3"></audio>
+  <audio id="sound06" src="sound/noises.mp3"></audio>
+  <audio id="sound07" src="sound/bigganready.mp3"></audio>
+  <audio id="sound08" src="sound/menfull.mp3"></audio>
+  <audio id="sound09" src="sound/armylimit.mp3"></audio>
+  <audio id="sound10" src="sound/lowmoney.mp3"></audio>
+  <audio id="sound11" src="sound/moresoldiers.mp3"></audio>
+  <audio id="sound12" src="sound/tanksfull.mp3"></audio>
+</div>
+<div class="">
+<h3>Story</h3>
+  <p class="story">Приветствую капитан! Новой колонии необходима многопрофильная <b>лаборатория</b> для поднятия уровня жизни, совершенствования систем разаботки новых месторождений, а так же добычи и переработки газа, и разработки новых технологий для прочих целей.</p>
+  <p class="story">Так же необходим завод для производства жизненноважных материалов, что бы снизить зависимость колонии от остального мира</p>
+  <p class="story">Нам нужно расширить колонию</p>
+  <p class="story">Необходим док с двумя истрибителями для дополнительной защиты колонии</p>
+  <p class="story">Нам нужен склад что бы принимать торговые корабли и продаватьь наш газ</p>
+  <p class="story">Нужно построить транспортный корабль, что бы доставлять газ на орбиту, на наш корабль</p>
+  <p class="story">Нам нужно расширить колонию, мы сможем принимать людей на ПМЖ и осваивать планету дальше</p>
+  <p class="story">Мы можем построить новую колонию</p>
+</div>
+<footer>
+<div class="">
+  <p>
+    New constellation ltd &#174; Frontend development company.
+  </p>
+</div>
+<div class="">
+  <p>
+    All right reserved &#169; 2012 - 2018
+  </p>
+</div>
+<div class="">
+  <p><script src="cmpn/botmenu.js"></script></p>
+</div>
+</footer>
+</body>
+</html>
