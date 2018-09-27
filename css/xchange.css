@@ -1,0 +1,15 @@
+body {
+  color: white;
+}
+section {
+  border-radius: 15px;
+  background-color:	rgba(0,0,0,0.8);
+}
+
+.buttons {
+  box-shadow: 1px 1px 0 0 blue;
+}
+
+section {
+  justify-content: flex-start;
+}

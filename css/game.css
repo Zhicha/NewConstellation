@@ -1,0 +1,72 @@
+body {
+  color: white;
+}
+.story {
+  font-size: 18px;
+}
+section {
+  border-radius: 15px;
+  background-color:	rgba(0,0,0,0.5);
+}
+
+.buttons {
+  box-shadow: 1px 1px 0 0 blue;
+}
+
+section {
+  justify-content: space-between;
+   align-items: flex-start;
+
+}
+.article2 {
+  min-height: 100px;
+}
+.consoleBar {
+  text-align: left;
+}
+td {
+  border: 1px solid Lightblue;
+  text-align: center;
+}
+
+.line {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px dashed darkgray;
+  text-align: center;
+}
+.cell:hover {
+  background-color: rgba(255,0,0,0.1);
+}
+
+.cell:active {
+  background-color: rgba(255,255,0,0.1);
+}
+
+.imgfishka {
+  margin-top: 20%;
+  margin-bottom: auto;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+       -ms-user-select: none; /* Internet Explorer/Edge */
+           user-select: none; /* Non-prefixed version, currently
+                                 supported by Chrome and Opera */
+}
+.imgCity {
+  border-radius: 15px;
+}
+
+.statusCity {
+  min-height: 5px;
+  margin: 1px 3px;
+  border-radius: 3px;
+  background-color: Lightblue;
+}

@@ -1,0 +1,98 @@
+body {
+  min-width: 300px;
+  height: 100%;
+  background-image: url("../img/fonstars.jpg");
+}
+header {
+  min-height: 50px;
+  margin: 10px;
+  background-color: rgba(255, 0, 0, 0.5);
+
+}
+h1 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  padding: 10px 40px;
+  color: white;
+  font-size: 14px;
+}
+
+.treemenu {
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.treemenu > li {
+  margin-bottom: 10px;
+}
+
+.treemenu li > a {
+  text-decoration: none;
+  color: darkblue;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.lightBackground {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+
+.buttons {
+  border-radius: 15px;
+}
+
+section {
+  display: flex;
+  border: 1px dotted red;
+  margin: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.article2 {
+  text-align: center;
+  margin: 10px;
+}
+.schemajpg {
+  width: 100%;
+}
+
+.rightside1 {
+}
+
+.robot {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+}
+
+footer {
+  display: flex;
+  margin: 10px;
+  min-height: 50px;
+  margin: 10px;
+  border: 1px dotted red;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pochta {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+   user-select: none;
+}

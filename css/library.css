@@ -1,0 +1,68 @@
+body {
+  color: white;
+}
+section {
+  border-radius: 15px;
+  background-color:	rgba(0,0,0,0.8);
+}
+
+.flexblock {
+  border-radius: 15px;
+  background-color:	rgba(0,0,0,0.8);
+  padding: 5px;
+  border: 1px dotted red;
+  margin: 10px;
+}
+
+.mainlibrary {
+  display: flex;
+}
+
+.editfield {
+    width: 300px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.editfieldcode {
+  height: 300px;
+
+}
+
+.treediv {
+  display: flex;
+  flex-direction: column;
+  color: lightblue;
+}
+
+.pcenter{
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttons {
+  box-shadow: 1px 1px 0 0 blue;
+}
+.treebutton {
+  width: 60px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0 0 blue;
+}
+
+.treeinput {
+  width: 20px;
+  background-color: black;
+  color: lightblue;
+  border: 0px;
+}
+
+.treerow {
+}
+
+.treerowbuh {
+    font-size: 22px;
+}
+.describecode {
+  font-size: 16px;
+}
+.editblock {
+}
