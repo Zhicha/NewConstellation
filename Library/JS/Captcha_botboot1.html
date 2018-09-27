@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>BotBoot</title>
+    
+    <script type="text/javascript">
+    var a = Math.ceil(Math.random() * 10);
+    var b = Math.ceil(Math.random() * 10);       
+    var c = a + b
+    function DrawBotBoot()
+    {
+        document.write("What is "+ a + " + " + b +"? ");
+        document.write("<input id='BotBootInput' type='text' maxlength='2' size='2'/>");
+    }    
+    function ValidBotBoot(){
+        var d = document.getElementById('BotBootInput').value;
+        if (d == c) return true;        
+        return false;
+        
+    }
+    </script>
+
+    
+    
+    
+</head>
+<body>
+
+Are you human?<br />
+
+<script type="text/javascript">DrawBotBoot()</script>
+<input id="Button1" type="button" value="Check" onclick="alert(ValidBotBoot());"/>
+
+
+
+
+
+</body>
+</html>
