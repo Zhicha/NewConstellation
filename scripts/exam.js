@@ -1,7 +1,33 @@
 // exam
+// Hight ordered function
+// Age of moms
+function average(array) {
+  function plus(a, b) {return a + b; }
+  return array.reduce(plus) / array.length;
+  }
+var byName = {};
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+var differences = ancestry.filter(function(person) {
+  return byName[person.mother] != null;
+}).map(function(person) {
+  return person.born - byName[person.mother].born;
+});
 
+console.log(average(differences));
+// my code
+
+
+//->31.2
 
 /*
+// Объединение массивов
+var arrays = [[1,2,3],[4,5],[6]];
+console.log(arrays.reduce(function(a,b) {
+  return a.concat(b);
+}));
+//Expected Result -> [1,2,3,4,5,6]
 // lesson Структуры данных
 // == если объекты ссылаются на один объект то true === сравнивает значения
 // typeof что бы узнать данные строка? число? массив? объект?

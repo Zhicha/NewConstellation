@@ -49,6 +49,6 @@
 <footer>
 <script src="cmpn/footer.js?v2"></script>
 </footer>
-<script defer src="scripts/list.js?v6"></script>
+<script defer src="scripts/list.js?v11"></script>
 </body>
 </html>

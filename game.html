@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="css/master.css">
 <link rel="stylesheet" href="css/game.css?v4">
 <title>New constellation ltd. Home page.</title>
-<script defer src="scripts/game.js"></script>
+<script defer src="scripts/game.js?v3"></script>
+<script defer src="scripts/gameunits.js?v3"></script>
+<script defer src="scripts/gameEvents.js?v3"></script>
+<script defer src="scripts/gamescenario.js?v3"></script>
 </head>
 <body>
 <header>
@@ -39,6 +42,11 @@
       <td id="gasLimit">0</td>
     </tr>
     <tr>
+      <td>Credo we have / costs</td>
+      <td id="credoThereIs">0</td>
+      <td id="credoCosts">0</td>
+  </tr>
+    <tr>
     <td>Soldiers 15 gas</td>
     <td id="soldierPehota" ><img class="imgfishka" src="img/pehota.png" alt="" onclick="new Audio('sound/click.mp3').play();buySoldier()"></td>
     <td id="countPehota">0</td>
@@ -47,6 +55,11 @@
   <td>Biggan 250 gas & 2 soldiers</td>
   <td id="bigGan" ><img class="imgfishka" src="img/biggan.jpg" alt="" onclick="new Audio('sound/click.mp3').play();buyBiggan()"></td>
   <td id="countBiggan">0</td>
+</tr>
+<tr>
+<td>Super gun 150 gas & 1 soldiers</td>
+<td id="superGun" ><img class="imgfishka" src="img/blackangel.jpg" alt="" style="width: 200px;" onclick="new Audio('sound/click.mp3').play();buySupergun()"></td>
+<td id="countSuperGun">0</td>
 </tr>
     </tbody>
   </table>
@@ -140,17 +153,32 @@
   <audio id="sound10" src="sound/lowmoney.mp3"></audio>
   <audio id="sound11" src="sound/moresoldiers.mp3"></audio>
   <audio id="sound12" src="sound/tanksfull.mp3"></audio>
+  <audio id="sound13" src="sound/tradeship.mp3"></audio>
+  <audio id="sound14" src="sound/shootgun.mp3"></audio>
+  <audio id="sound15" src="sound/pirates.mp3"></audio>
+  <audio id="sound16" src="sound/humattacked.mp3"></audio>
+  <audio id="sound17" src="sound/pulemeta.mp3"></audio>
+  <audio id="sound18" src="sound/supergun.mp3"></audio>
 </div>
 <div class="">
 <h3>Story</h3>
+  <p class="story">Идея в том, что ты колонизируешь планету, в отношении ресурсов. Есть два врага. Местные гуманоиды, наносят вред персоналу и базе и пираты, которые похищают газ, если превосходят мощью. Так же могут захватить оружие, людей, базу или даже уничтожить всё! Это зависит от их клана (по степени опасности). Вас 30 человек, на планете провизия и газ. Можно иметь лабораторию и некоторое самообеспечение. Всё кругом продаётся за некое кредо. Торговые корабли скупают газ по строго регламентируемой цене то есть некий 1 газ за одно кредо. Так как обычно всё бюджетируется за раннее, расходы влияют на скорость поступления газа, а не на кредо. Замедление поступления газа означает увеличение издержек. обеспечение 1 единицы включает все её издержки (исключая цену приобретения единицы, так как это есть мзда транспортного корабля). Соответсятвенно обеспечение солдата стоит дороже, обеспечение точки ещё дороже.
+  Что бы что то купить надо это либо произвести, либо купить на корабле (они типа летающих супермаркетов), там обычно есть всё что нужно.
+  Газ тоже скупают эти корабли и платят кредо.
+  </p>
+  <p class="story">Стартовые данные 31 чел. и 100 лимит для первой мини базы. 5 солдат (лимит 15) и одно спец. орудие против гуманоидов. Остальное покупается на транспортном корабле в соответствии лимитам за кредо.</p>
   <p class="story">Приветствую капитан! Новой колонии необходима многопрофильная <b>лаборатория</b> для поднятия уровня жизни, совершенствования систем разаботки новых месторождений, а так же добычи и переработки газа, и разработки новых технологий для прочих целей.</p>
   <p class="story">Так же необходим завод для производства жизненноважных материалов, что бы снизить зависимость колонии от остального мира</p>
   <p class="story">Нам нужно расширить колонию</p>
-  <p class="story">Необходим док с двумя истрибителями для дополнительной защиты колонии</p>
+  <p class="story">Необходим док с двумя истребителями для дополнительной защиты колонии</p>
   <p class="story">Нам нужен склад что бы принимать торговые корабли и продаватьь наш газ</p>
   <p class="story">Нужно построить транспортный корабль, что бы доставлять газ на орбиту, на наш корабль</p>
   <p class="story">Нам нужно расширить колонию, мы сможем принимать людей на ПМЖ и осваивать планету дальше</p>
   <p class="story">Мы можем построить новую колонию</p>
+  <p class="story">На торговых короблях, в поисках работы, путешествуют люди. Рабочие, учёные и военные. Когда прибудет торговый корабль вы сможете нанять их.</p>
+  <p class="story">В прошлом году в этой системе нередко промышляли пираты. Вооружайтесь и создавайте альянсы с соседними колонистами, что бы устоять!</p>
+  <p class="story">Нам нужна лаборатория и экспидиция, что бы осваивать новые горизонты!</p>
+  <p class="story">Сбив пиратский корабль ты можешь отправить экспезицию (нужет лунаход или луналёт) и подобрать обломки. Любые ресурсы в цене! Тем более что за головы некоторых пиратов назначены приличные вознаграждения! Надеюсь тебе повезёт.</p>
 </div>
 <footer>
 <div class="">

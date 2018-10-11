@@ -4,9 +4,39 @@
 */
 // Функции высшего порядка
 
-
+/*
 // JSON
-
+// bint
+var theSet = ["Carnel Haverbeke", "Maria van Brussel", "Donald Duck"];
+function isInSet(set, person) {
+  return set.indexOf(person.name) > -1;
+}
+console.log(ancestry.filter(function(person) {
+  return isInSet(theSet, person);
+}));
+// -> [{name: "Maria van Brussel", ...},
+//     {name: "Carnel Haverbeke", ...}]
+console.log(ancestry.filter(isInSet.bind(null, theSet)));
+//-> The same result ^
+//
+function countAncestors(person, test) {
+  function combine(person, fromMother, fromFather) {
+    var thisOneCounts = test(person);
+    return fromMother + fromFather +(thisOneCounts ? 1 : 0);
+  }
+  return reduceAncestors(person, combine, 0);
+}
+function longLivingPercentage(person) {
+  var all = countAncestors(person, function(person) {
+    return true;
+  })
+  var longLiving = countAncestors(person, function(person) {
+    return (person.died - person.born) >= 70;
+  });
+  return longLiving / all;
+}
+console.log(longLivingPercentage(byName["Emile Haverbeke"]));
+// -> 0.145
 function reduceAncestors(person, f, defaultValue) {
   function valueFor(person) {
     if (person == null) {
@@ -35,8 +65,6 @@ function sharedDNA(person, fromMother, fromFather) {
 var ph = byName["Philibert Haverbeke"];
 console.log(reduceAncestors(ph, sharedDNA, 0)/4);
 //-> 0.00049
-
-/*
 // average age
 function average(array) {
   function plus(a,b) {return a + b; }

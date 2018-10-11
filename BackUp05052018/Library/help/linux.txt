@@ -1,0 +1,5 @@
+		LINUX DEBIAN 8
+
+RUN .SH
+bash /test.sh
+

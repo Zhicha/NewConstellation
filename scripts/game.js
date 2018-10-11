@@ -1,9 +1,10 @@
 // Game
 //Global
 var colonyName = "Colony A01";
-var colonyArmyLimit = 15;
-var power1 = {limit: 99, elite: 2, workers: 10, soldires: 20, eliteArmy: 4, gasLimit: 499};
+var colonyArmyLimit = 0;
+var power1 = {limit: 99, limitforBase: 99, elite: 2, workers: 10, soldires: 20, eliteArmy: 4, gasLimit: 499};
 var bigGans = {limit: 4, soldier: 2, attack: 140, cost: 250}
+var superGun = {limit: 4, soldier: 1, attack: 30, cost: 150}
 var resourseGas = 0;
 var soldereCost = 15;
 var human = [100,5]; //health, speed
@@ -77,7 +78,7 @@ function gasGet() {
   resourseGas++;
   if (resourseGas <= power1.gasLimit) {
     document.getElementById('gasThereIs').innerHTML = resourseGas;
-  } else if (document.getElementById('consoleBar').textContent == 'Attention, all tanks are full!') {    
+  } else if (document.getElementById('consoleBar').textContent == 'Attention, all tanks are full!') {
   } else {
     consoleBar('Attention, all tanks are full!');
     noiseLink();
@@ -123,69 +124,6 @@ function manBorn() {
   }
 }
 }
-//Army
-//Soldier
-function buySoldier() {
-  var eliteResource01 = document.getElementById('elite').textContent;
-  var workersResource01 = document.getElementById('workers').textContent;
-  var menResousce01 = document.getElementById('menResousce').textContent;
-  var countPehota01 = document.getElementById('countPehota').textContent;
-  if (eliteResource01 == 0 && workersResource01 == 0 && menResousce01 > 0 && resourseGas > soldereCost) {
-    if (countPehota01 >= colonyArmyLimit) {
-        noiseLink();
-        consoleImg('img/workers.jpg');
-        document.getElementById("sound09").play();
-        alert("Limit army for " + colonyName);
-    } else if (Number(countPehota01) >= Number(menResousce01)) {
-        alert("There are not free human in the " + colonyName);
-    } else {
-      countPehota01++;
-      document.getElementById('countPehota').innerHTML = '';
-      document.getElementById('countPehota').innerHTML = countPehota01;
-      resourseGas = document.getElementById('gasThereIs').textContent;
-      resourseGas = resourseGas - soldereCost;
-      document.getElementById('gasThereIs').innerHTML = resourseGas;
-      console.log("solder ready -"+soldereCost+' gas');
-      consoleBar('Solder is ready.');
-      noiseLink();
-      consoleImg('img/workers.jpg');
-      document.getElementById("sound05").play();
-    }
-  } else {
-    noiseLink();
-    consoleImg('img/secreter.jpg');
-    document.getElementById("sound10").play();
-    alert("There are not free human or not enough gas in the " + colonyName);
-  }
-}
-// Biggan
-  function buyBiggan() {
-    var countBiggan = document.getElementById('countBiggan').textContent;
-    var countPehota01 = document.getElementById('countPehota').textContent;
-    if (countBiggan >= bigGans.limit) {
-      noiseLink();
-      consoleImg('img/workers.jpg');
-      document.getElementById("sound09").play();
-        alert("Limit army for " + colonyName);
-      } else if (((Number(countPehota01) - (Number(countBiggan)*2)) >= bigGans.soldier) && resourseGas >= bigGans.cost) {
-        Number(countBiggan);
-        countBiggan++;
-        document.getElementById('countBiggan').innerHTML = '';
-        document.getElementById('countBiggan').innerHTML = countBiggan;
-        resourseGas = document.getElementById('gasThereIs').textContent;
-        resourseGas = resourseGas - bigGans.cost;
-        document.getElementById('gasThereIs').innerHTML = resourseGas;
-        consoleBar('BigGun is ready.');
-        noiseLink();
-        consoleImg('img/workers.jpg');
-        document.getElementById("sound07").play();
-        } else {
-          noiseLink();
-          consoleImg('img/workers.jpg');
-          document.getElementById("sound11").play();
-        alert('There are not free '+bigGans.soldier+' soldiers or not enough '+bigGans.cost+' gas in the ' + colonyName);
-      }
-  }
 
   // Game process
   var intervalManBorn = setInterval(manBorn, 1000);
@@ -220,10 +158,3 @@ function fullNoise() {
 function noiseLink() {
   document.getElementById("sound03").play();
 }
-
-// Start game default
-DoYouNeed();
-GasStart();
-consoleBar('Start game!');
-fullNoise();
-setTimeout(mainScreen, 2000);
